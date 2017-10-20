@@ -11,22 +11,24 @@ import {
 } from 'react-native';
 
 var _ = require('lodash');
+var createReactClass = require('create-react-class');
+var PropTypes = require('prop-types');
 
-var Accordion = React.createClass({
+var Accordion = createReactClass({
     mixins: [tweenState.Mixin],
 
     propTypes: {
-        activeOpacity: React.PropTypes.number,
-        animationDuration: React.PropTypes.number,
-        content: React.PropTypes.element.isRequired,
-        easing: React.PropTypes.string,
-        expanded: React.PropTypes.bool,
-        header: React.PropTypes.element.isRequired,
-        headerOpen: React.PropTypes.element,
-        onPress: React.PropTypes.func,
-        underlayColor: React.PropTypes.string,
-        style: React.PropTypes.object,
-        styleOpen: React.PropTypes.object,
+        activeOpacity: PropTypes.number,
+        animationDuration: PropTypes.number,
+        content: PropTypes.element.isRequired,
+        easing: PropTypes.string,
+        expanded: PropTypes.bool,
+        header: PropTypes.element.isRequired,
+        headerOpen: PropTypes.element,
+        onPress: PropTypes.func,
+        underlayColor: PropTypes.string,
+        style: PropTypes.object,
+        styleOpen: PropTypes.object,
     },
 
     getDefaultProps() {
